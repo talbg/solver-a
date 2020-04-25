@@ -13,3 +13,4 @@ class Polynomial2 {
 			_a(a), _b(0), _c(0)			{  }
 		Polynomial2(double a, double b, double c): 
 			_a(a), _b(b), _c(c)			{  }
+			}
