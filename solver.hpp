@@ -1,42 +1,60 @@
 
 #include <iostream>
 #include <complex>
+using namespace std;
 
 namespace solver{
-	class RealVariable {
-	// private:
-		// double a, b, c;
-	// public:
-		// RealVariable(): a(0), b(0), c(0){}
-		// RealVariable(double x, double y, double z): a(x), b(y), c(z){}
-		
-		// double operator() (double x) { 
-			// return _a*x*x + _b*x + _c; }
-
-		// double operator()() { 
-			// return 0; 
-		// }
-
-    };
 	
-	class ComplexVariable {
-		// double a, b;
-		
+	double	solve(RealEquation Real);
+	std::complex<double>	solve(ComplexVariable x);
+	
+	class RealVariable {
+	public:
+		RealEquation operator+(double e);
+		RealEquation operator-(double e);
+		RealEquation operator/(double e);
+		RealEquation operator^(double e);
+		RealEquation operator==(RealEquation e);
 	};
-	class Equation {
-		enum  { Real, Complex };
+	RealEquation operator*(double a, RealVariable e1);
+	
+	
+	class RealEquation {
 	public:
 		double a, b, c;
 		
-		Equation operator==(Equation e);
+		RealEquation operator==(RealEquation e);
+		RealEquation operator==(double x);
+		RealEquation operator+(RealEquation e);
+		RealEquation operator+(double x);
+		RealEquation operator/(double x);
 	}
+	RealEquation operator()(RealEquation e);
+	RealEquation operator==(double a, RealEquation e1);
+	
+	class ComplexVariable {
+	public:
+		ComplexVariable operator+(double e);
+		ComplexVariable operator-(double e);
+		ComplexVariable operator/(double e);
+		ComplexVariable operator^(double e);
+		ComplexVariable operator==(complexEquation e);
+	};
+	RealEquation operator*(double a, RealVariable e1);
+	
+	class complexEquation {
+	public:
+		std::complex<double> a, b, c;
+		
+		complexEquation operator==(complexEquation e);
+		complexEquation operator==(double x);
+		complexEquation operator+(complexEquation e);
+		complexEquation operator+(double x);
+		complexEquation operator/(double x);
+	}
+	complexEquation operator()(complexEquation e);
+	complexEquation operator==(std::complex<double> a, complexEquation e1);
+
 }
 
 
-
-Equation operator==(Equation e1, Equation e2);
-Equation operator==(Equation e1, double a);
-Equation operator==(double a, Equation e1);
-
-double	solve(RealVariable x);
-std::complex<double>	solve(ComplexVariable x);
