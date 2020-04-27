@@ -10,7 +10,7 @@ namespace solver{
 		RealVariable()
 		: a(0), b(0), c(0){}
 	
-		friend RealVariable& operator+(double e);
+		RealVariable& operator+(double e);
 		friend RealVariable& operator+(RealVariable e);
 		friend RealVariable& operator-(double e);
 		friend RealVariable& operator-(RealVariable e);
