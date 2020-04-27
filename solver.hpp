@@ -9,7 +9,6 @@ namespace solver{
 		double a, b, c;
 		RealVariable()
 		: a(0), b(0), c(0){}
-		RealVariable& operator*(double a, solver::RealVariable& e);
 	};
 	
 	RealVariable& operator+(solver::RealVariable& x, solver::RealVariable e);
@@ -17,6 +16,7 @@ namespace solver{
 	RealVariable& operator+(double x, solver::RealVariable& e);
 	RealVariable& operator-(solver::RealVariable& x, double e);
 	RealVariable& operator-(solver::RealVariable& x, solver::RealVariable e);
+	RealVariable& operator*(double a, solver::RealVariable& e);
 	RealVariable& operator/(solver::RealVariable& x, double e);
 	RealVariable& operator^(solver::RealVariable& x, double e);
 	RealVariable& operator==(solver::RealVariable& x, double e);
