@@ -8,7 +8,7 @@ using namespace solver;
 solver::RealVariable& operator+(double e){
     return &this;
 }
-friend solver::RealVariable& operator+(RealVariable e){
+solver::RealVariable& operator+(this, RealVariable e){
     return &this;
 }
 solver::RealVariable& operator-(double e){
