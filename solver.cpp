@@ -5,23 +5,23 @@
 using namespace solver;
 
 
-solver::RealVariable& operator+(double e){
-    return &this;
+solver::RealVariable& operator+(RealVariable& x, double e){
+    return &x;
 }
 solver::RealVariable& operator+(RealVariable x, RealVariable e){
     return &x;
 }
-solver::RealVariable& operator-(double e){
-    return &this;
+solver::RealVariable& operator-(RealVariable& x, double e){
+    return &x;
 }
 solver::RealVariable& operator-(RealVariable x, RealVariable e){
     return &x;
 }
-solver::RealVariable& operator/(double e){
-    return &this;
+solver::RealVariable& operator/(RealVariable& x,double e){
+    return &x;
 }
-solver::RealVariable& operator^(double e){
-    return &this;
+solver::RealVariable& operator^(RealVariable& x,double e){
+    return &x;
 }
 solver::RealVariable& operator==(RealVariable x, RealVariable e){
     return &x;
@@ -30,11 +30,11 @@ solver::RealVariable& operator==(RealVariable x, RealVariable e){
 solver::RealVariable& operator+(double x, RealVariable e){
     return &e;
 }
-solver::ComplexVariable& operator+(std::complex<double> e){
-    return &this;
+solver::ComplexVariable& operator+(ComplexVariable& x, std::complex<double> e){
+    return &x;
 }
-solver::ComplexVariable& operator-(std::complex<double> e){
-    return &this;
+solver::ComplexVariable& operator-(ComplexVariable& x, std::complex<double> e){
+    return &x;
 }
 ComplexVariable& operator+(ComplexVariable& x, ComplexVariable e){
     return &x;
@@ -46,11 +46,11 @@ ComplexVariable& operator+(double x, ComplexVariable e){
 ComplexVariable& operator-(ComplexVariable& x, ComplexVariable e){
     return &x;
 }
-solver::ComplexVariable& operator/(double e){
-    return &this;
+solver::ComplexVariable& operator/(ComplexVariable& x, double e){
+    return &x;
 }
-solver::ComplexVariable& operator^(double e){
-    return &this;
+solver::ComplexVariable& operator^(ComplexVariable& x, double e){
+    return &x;
 }
 solver::ComplexVariable& operator==(ComplexVariable x, ComplexVariable e){
     return &x;
