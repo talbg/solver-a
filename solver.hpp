@@ -16,16 +16,16 @@ namespace solver{
 		// friend RealVariable& operator*(RealVariable e1);
 		// friend RealVariable& operator*(double a);
 	};
-	RealVariable& operator+(solver::RealVariable& x,double e);	
-	RealVariable& operator-(solver::RealVariable& x,double e);
-	RealVariable& operator/(solver::RealVariable& x,double e);
-	RealVariable& operator^(solver::RealVariable& x,double e);
+	RealVariable& operator+(solver::RealVariable& x, double e);	
+	RealVariable& operator-(solver::RealVariable& x, double e);
+	RealVariable& operator/(solver::RealVariable& x, double e);
+	RealVariable& operator^(solver::RealVariable& x, double e);
 	RealVariable& operator+(solver::RealVariable& x, solver::RealVariable e);
 	RealVariable& operator+(double x, solver::RealVariable& e);
 	RealVariable& operator-(solver::RealVariable& x, solver::RealVariable e);
 	RealVariable& operator==(solver::RealVariable& x, double e);
 	RealVariable& operator==(solver::RealVariable& x, solver::RealVariable e);
-	RealVariable& operator*(double a, solver::RealVariable& e);
+	solver::RealVariable& operator*(double a, solver::RealVariable& e);
 	RealVariable& operator==(double a, solver::RealVariable& e);
 	
 	class ComplexVariable {
