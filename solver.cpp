@@ -33,13 +33,7 @@ solver::RealVariable& operator+(double x, RealVariable e){
 solver::ComplexVariable& operator+(std::complex<double> e){
     return &this;
 }
-friend solver:::ComplexVariable& operator+(ComplexVariable e){
-    return &this;
-};
 solver::ComplexVariable& operator-(std::complex<double> e){
-    return &this;
-}
-friend solver::ComplexVariable& operator-(ComplexVariable e){
     return &this;
 }
 ComplexVariable& operator+(ComplexVariable& x, ComplexVariable e){
