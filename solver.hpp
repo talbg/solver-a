@@ -6,18 +6,24 @@ using namespace std;
 namespace solver{
 	class RealVariable {
 	public:
-		RealEquation operator+(double e);
-		RealEquation operator-(double e);
-		RealEquation operator/(double e);
-		RealEquation operator^(double e);
-		RealEquation operator==(RealEquation e);
+		double a, b, c;
+	RealVariable(){
+		a=0, b=0, c=0; 
 	}
-	friend RealEquation &operator*(double a, RealVariable &e1);
+	
+		friend RealEquation &operator+ (double &e);
+		friend RealEquation &operator- (double &e);
+		friend RealEquation &operator/ (double &e);
+		friend RealEquation &operator^ (double &e);
+		friend RealEquation &operator==(RealEquation &e);
+		friend RealEquation &operator*(double a, RealVariable &e1);
 };
 	
 	class RealEquation {
 	public:
 		double a, b, c;
+	
+
 		
 		RealEquation operator==(RealEquation e);
 		RealEquation operator==(double x);
