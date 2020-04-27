@@ -5,7 +5,7 @@
 using namespace solver;
 
 
-friend solver::RealVariable& operator+(double e){
+solver::RealVariable& operator+(double e){
     return &this;
 }
 friend solver::RealVariable& operator+(RealVariable e){
