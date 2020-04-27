@@ -15,9 +15,6 @@ solver::RealVariable& operator-(double e){
     return &this;
 }
 solver::RealVariable& operator-(RealVariable x, RealVariable e){
-	
-	
-solver::RealVariable& operator-(RealVariable x, RealVariable e){
     return &x;
 }
 solver::RealVariable& operator/(double e){
