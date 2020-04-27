@@ -19,7 +19,7 @@ RealVariable& operator-(solver::RealVariable& x, double e){
 RealVariable& operator-(solver::RealVariable& x, solver::RealVariable e){
     return x;
 }
-RealVariable& operator*(double a, solver::RealVariable& e){
+const RealVariable& operator*(double a, solver::RealVariable& e){
     return e;
 }
 RealVariable& operator/(solver::RealVariable& x, double e){
