@@ -9,13 +9,8 @@ namespace solver{
 		double a, b, c;
 		RealVariable()
 		: a(0), b(0), c(0){}
-	
-		
-		
-		// friend RealVariable& operator/(RealVariable e);
-		// friend RealVariable& operator*(RealVariable e1);
-		// friend RealVariable& operator*(double a);
 	};
+	
 	RealVariable& operator+(solver::RealVariable& x, double e);	
 	RealVariable& operator-(solver::RealVariable& x, double e);
 	RealVariable& operator/(solver::RealVariable& x, double e);
