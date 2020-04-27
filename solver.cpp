@@ -55,7 +55,7 @@ solver::ComplexVariable& operator==(solver::ComplexVariable& x, solver::ComplexV
     return x;
 }
 solver::ComplexVariable& operator==(solver::ComplexVariable& x , std::complex<double>){
-    retrun x;
+    return x;
 }
 solver::RealVariable& operator*(double a, solver::RealVariable& e){
     return e;
