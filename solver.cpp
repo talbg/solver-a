@@ -42,7 +42,7 @@ solver::ComplexVariable& operator+(solver::ComplexVariable& x, solver::ComplexVa
 solver::ComplexVariable& operator+(double x, ComplexVariable& e){
     return e;
 }  
-ComplexVariable& operator-(solver::ComplexVariable& x, solver::ComplexVariable e){
+solver::ComplexVariable& operator-(solver::ComplexVariable& x, solver::ComplexVariable e){
     return x;
 }
 solver::ComplexVariable& operator/(solver::ComplexVariable& x, double e){
@@ -57,7 +57,7 @@ solver::ComplexVariable& operator==(solver::ComplexVariable& x, solver::ComplexV
 solver::ComplexVariable& operator==(solver::ComplexVariable& x , std::complex<double>){
     return x;
 }
-friend solver::RealVariable& operator*(double a, solver::RealVariable& e){
+solver::RealVariable& operator*(double a, solver::RealVariable& e){
     return e;
 }
 solver::RealVariable& operator==(double a, solver::RealVariable& e){
