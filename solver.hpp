@@ -42,6 +42,7 @@ namespace solver{
 		
 	};
 	ComplexVariable& operator+(ComplexVariable& x, ComplexVariable e);
+	ComplexVariable& operator+(double x, ComplexVariable e);
 	ComplexVariable& operator-(ComplexVariable& x, ComplexVariable e);
 	ComplexVariable& operator==(ComplexVariable& x, ComplexVariable e);
 	ComplexVariable& operator==(ComplexVariable& x, std::complex<double>);
