@@ -20,7 +20,7 @@ namespace solver{
 	RealVariable& operator-(solver::RealVariable& x, solver::RealVariable e);
 	RealVariable& operator==(solver::RealVariable& x, double e);
 	RealVariable& operator==(solver::RealVariable& x, solver::RealVariable e);
-	solver::RealVariable& operator*(double a, solver::RealVariable& e);
+	friend solver::RealVariable& operator*(double a, solver::RealVariable& e);
 	RealVariable& operator==(double a, solver::RealVariable& e);
 	
 	class ComplexVariable {
