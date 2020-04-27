@@ -8,14 +8,14 @@ using namespace solver;
 solver::RealVariable& operator+(double e){
     return &this;
 }
-solver::RealVariable& operator+(this, RealVariable e){
-    return &this;
+solver::RealVariable& operator+(RealVariable x, RealVariable e){
+    return &x;
 }
 solver::RealVariable& operator-(double e){
     return &this;
 }
-friend solver::RealVariable& operator-(RealVariable e){
-    return &this;
+solver::RealVariable& operator-(RealVariable x, RealVariable e){
+    return &x;
 }
 solver::RealVariable& operator/(double e){
     return &this;
@@ -23,8 +23,8 @@ solver::RealVariable& operator/(double e){
 solver::RealVariable& operator^(double e){
     return &this;
 }
-solver::RealVariable& operator==(this, RealVariable e){
-    return &this;
+solver::RealVariable& operator==(RealVariable x, RealVariable e){
+    return &x;
 }
 
 solver::RealVariable& operator+(double x, RealVariable e){
