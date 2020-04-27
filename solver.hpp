@@ -12,17 +12,17 @@ namespace solver{
 	
 		RealVariable& operator+(double e);
 		friend RealVariable& operator+(RealVariable e);
-		friend RealVariable& operator-(double e);
+		RealVariable& operator-(double e);
 		friend RealVariable& operator-(RealVariable e);
-		friend RealVariable& operator/(double e);
-		friend RealVariable& operator^(double e);
+		RealVariable& operator/(double e);
+		RealVariable& operator^(double e);
 		friend RealVariable& operator==(RealVariable e);
-		friend RealVariable& operator==(double e);
+		RealVariable& operator==(double e);
 		// friend RealVariable& operator/(RealVariable e);
 		// friend RealVariable& operator*(RealVariable e1);
 		// friend RealVariable& operator*(double a);
 	};
-	RealVariable& operator()(RealVariable e);
+	RealVariable& operator()(RealVariable& e);
 	RealVariable& operator*(double a, RealVariable e);
 	RealVariable& operator==(double a, RealVariable e);
 	
@@ -32,14 +32,14 @@ namespace solver{
 		
 		ComplexVariable()
 		: a(0), b(0), c(0){}
-		friend ComplexVariable& operator+(std::complex<double> e);
+		ComplexVariable& operator+(std::complex<double> e);
 		friend ComplexVariable& operator+(ComplexVariable e);
-		friend ComplexVariable& operator-(std::complex<double> e);
+		ComplexVariable& operator-(std::complex<double> e);
 		friend ComplexVariable& operator-(ComplexVariable e);
-		friend ComplexVariable& operator/(double e);
-		friend ComplexVariable& operator^(double e);
+		ComplexVariable& operator/(double e);
+		ComplexVariable& operator^(double e);
 		friend ComplexVariable& operator==(ComplexVariable e);
-		friend ComplexVariable& operator==(std::complex<double>);
+		ComplexVariable& operator==(std::complex<double>);
 	};
 	ComplexVariable& operator()(ComplexVariable e);
 	ComplexVariable& operator*(double a, ComplexVariable e1);
