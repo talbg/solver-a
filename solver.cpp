@@ -1,7 +1,7 @@
 
 #include "solver.hpp"
 #include <exception>
-#include<cmath>
+#include <cmath>
 using namespace solver;
 
 
