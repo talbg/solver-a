@@ -48,11 +48,11 @@ solver::ComplexVariable& operator/(double e){
 solver::ComplexVariable& operator^(double e){
     return &this;
 }
-solver::ComplexVariable& operator==(this, ComplexVariable e){
-    return &this;
+solver::ComplexVariable& operator==(ComplexVariable x, ComplexVariable e){
+    return &x;
 }
-solver::ComplexVariable& operator==(this , std::complex<double>){
-    retrun &this;
+solver::ComplexVariable& operator==(ComplexVariable x , std::complex<double>){
+    retrun &x;
 }
 // solver::RealVariable& operator()(RealVariable& e){
 //     return &e;
