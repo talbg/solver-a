@@ -4,14 +4,87 @@
 #include<cmath>
 using namespace solver;
 
-double	solve(RealEquation Real){
-	if(Real.a != 0)
-		return (-Real.b+sqrt(Real.b-4*Real.a*Real.c))/4*Real.a;
-	else if (b != 0)
-		return (-Real.c)/Real.b;
-	else
-		throw runtime_error(" can't solve this equation ");
+
+friend solver::RealVariable& operator+(double e){
+    return &this;
 }
+friend solver::RealVariable& operator+(RealVariable e){
+    return &this;
+}
+friend solver::RealVariable& operator-(double e){
+    return &this;
+}
+friend solver::RealVariable& operator-(RealVariable e){
+    return &this;
+}
+friend solver::RealVariable& operator/(double e){
+    return &this;
+}
+friend solver::RealVariable& operator^(double e){
+    return &this;
+}
+friend solver::RealVariable& operator==(RealVariable e){
+    return &this;
+}
+friend solver::ComplexVariable& operator+(std::complex<double> e){
+    return &this;
+}
+friend solver:::ComplexVariable& operator+(ComplexVariable e){
+    return &this;
+};
+friend solver::ComplexVariable& operator-(std::complex<double> e){
+    return &this;
+}
+friend solver::ComplexVariable& operator-(ComplexVariable e){
+    return &this;
+}
+friend solver::ComplexVariable& operator/(double e){
+    return &this;
+}
+friend solver::ComplexVariable& operator^(double e){
+    return &this;
+}
+friend solver::ComplexVariable& operator==(ComplexVariable e){
+    return &this;
+}
+friend solver::ComplexVariable& operator==(std::complex<double>){
+    retrun &this;
+}
+solver::RealVariable& operator()(RealVariable& e){
+    return &e;
+}
+solver::RealVariable& operator*(double a, RealVariable& e){
+    return &e;
+}
+solver::RealVariable& operator==(double a, RealVariable& e){
+    return &e;
+}
+solver::ComplexVariable& operator()(ComplexVariable& e){
+    return &e;
+}
+solver::ComplexVariable& operator*(double a, ComplexVariable& e1){
+    return &e;
+}
+solver::ComplexVariable& operator==(double a, ComplexVariable& e){
+    return &e;
+}
+double solve(RealVariable Real){
+    return 0;
+}
+std::complex<double> solve(ComplexVariable x){
+    return i;
+}
+
+
+
+//		friend RealVariable& operator==(double e);uble	solve(RealEquation Real){
+//	if(Real.a != 0)
+//		return (-Real.b+sqrt(Real.b-4*Real.a*Real.c))/4*Real.a;
+//	else if (b != 0)
+//		return (-Real.c)/Real.b;
+//	else
+//		throw runtime_error(" can't solve this equation ");
+//}
 
 
 
