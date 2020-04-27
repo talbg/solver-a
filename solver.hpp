@@ -4,10 +4,6 @@
 using namespace std;
 
 namespace solver{
-	
-	double	solve(RealEquation Real);
-	std::complex<double>	solve(ComplexVariable x);
-	
 	class RealVariable {
 	public:
 		RealEquation operator+(double e);
@@ -15,9 +11,9 @@ namespace solver{
 		RealEquation operator/(double e);
 		RealEquation operator^(double e);
 		RealEquation operator==(RealEquation e);
-	};
-	RealEquation operator*(double a, RealVariable e1);
-	
+	}
+	friend RealEquation &operator*(double a, RealVariable &e1);
+};
 	
 	class RealEquation {
 	public:
@@ -52,9 +48,13 @@ namespace solver{
 		complexEquation operator+(double x);
 		complexEquation operator/(double x);
 	}
-	complexEquation operator()(complexEquation e);
-	complexEquation operator==(std::complex<double> a, complexEquation e1);
+	friend complexEquation operator()(complexEquation &e);
+	friend complexEquation operator==(std::complex<double> &a, complexEquation &1);
 
-}
+};
+
+	double solve(RealEquation Real);
+	std::complex<double>	solve(ComplexVariable x);
+};
 
 
