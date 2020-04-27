@@ -23,7 +23,7 @@ solver::RealVariable& operator/(double e){
 solver::RealVariable& operator^(double e){
     return &this;
 }
-friend solver::RealVariable& operator==(RealVariable e){
+solver::RealVariable& operator==(this, RealVariable e){
     return &this;
 }
 solver::ComplexVariable& operator+(std::complex<double> e){
@@ -44,10 +44,10 @@ solver::ComplexVariable& operator/(double e){
 solver::ComplexVariable& operator^(double e){
     return &this;
 }
-friend solver::ComplexVariable& operator==(ComplexVariable e){
+solver::ComplexVariable& operator==(this, ComplexVariable e){
     return &this;
 }
-solver::ComplexVariable& operator==(std::complex<double>){
+solver::ComplexVariable& operator==(this , std::complex<double>){
     retrun &this;
 }
 solver::RealVariable& operator()(RealVariable& e){
