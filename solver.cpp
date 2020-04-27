@@ -26,6 +26,10 @@ solver::RealVariable& operator^(double e){
 solver::RealVariable& operator==(this, RealVariable e){
     return &this;
 }
+
+solver::RealVariable& operator+(double x, RealVariable e){
+    return &e;
+}
 solver::ComplexVariable& operator+(std::complex<double> e){
     return &this;
 }
