@@ -13,13 +13,13 @@ RealVariable operator+(double x, solver::RealVariable e){
     return e;
 }
 RealVariable RealVariable::operator-(const RealVariable& x, double e){
-    return x;
+    return RealVariable();
 }
 RealVariable operator-(solver::RealVariable x, solver::RealVariable e){
     return x;
 }
 RealVariable RealVariable::operator*(double a, const RealVariable& e){
-    return e;
+    return RealVariable();
 }
 RealVariable operator/(solver::RealVariable x, double e){
     return x;
@@ -34,7 +34,7 @@ RealVariable operator==(double a, solver::RealVariable e){
     return e;
 }
 RealVariable RealVariable::operator==(const RealVariable& x, double e){
-    return x;
+    return RealVariable();
 }
 ComplexVariable& operator+(solver::ComplexVariable& x, solver::ComplexVariable e){
     return x;
