@@ -18,12 +18,14 @@ namespace solver{
 		friend RealVariable operator^(const RealVariable& x, double e);
 		friend RealVariable operator==(const RealVariable& x, RealVariable e);
 		
-		friend double solve(const RealVariable& Real);
 	};
 	
 	RealVariable operator+(double x, const RealVariable& e);
        	RealVariable operator*(double a, const RealVariable& e);
 	RealVariable operator==(double a, RealVariable e);
+	
+	
+	double solve(const RealVariable& Real);
 	
 	class ComplexVariable {
 	public:
