@@ -31,23 +31,21 @@ namespace solver{
 		
 		ComplexVariable()
 		: a(0), b(0), c(0){}
+		friend ComplexVariable operator+(const ComplexVariable& x, std::complex<double> e);
+		friend ComplexVariable operator-(const ComplexVariable& x, std::complex<double> e);
+		friend ComplexVariable operator/(const ComplexVariable& x, double e);
+		friend ComplexVariable operator^(const ComplexVariable& x, double e);
+		friend ComplexVariable operator+(const ComplexVariable& x, solver::ComplexVariable e);
+		friend ComplexVariable operator-(const ComplexVariable& x, solver::ComplexVariable e);
+		friend ComplexVariable operator==(const ComplexVariable& x, solver::ComplexVariable e);
+		friend ComplexVariable operator==(const ComplexVariable& x, std::complex<double>);
 		
+		friend std::complex<double> solve(const ComplexVariable& x);	
 	};
-	ComplexVariable& operator+(solver::ComplexVariable& x, std::complex<double> e);
-	ComplexVariable& operator-(solver::ComplexVariable& x, std::complex<double> e);
-	ComplexVariable& operator/(solver::ComplexVariable& x, double e);
-	ComplexVariable& operator^(solver::ComplexVariable& x, double e);
-		
-	ComplexVariable& operator+(solver::ComplexVariable& x, solver::ComplexVariable e);
 	ComplexVariable& operator+(std::complex<double> x, solver::ComplexVariable e);
-	ComplexVariable& operator-(solver::ComplexVariable& x, solver::ComplexVariable e);
-	ComplexVariable& operator==(solver::ComplexVariable& x, solver::ComplexVariable e);
-	ComplexVariable& operator==(solver::ComplexVariable& x, std::complex<double>);
-	//ComplexVariable& operator()(ComplexVariable e);
 	ComplexVariable& operator*(std::complex<double> a, solver::ComplexVariable& e1);
 	ComplexVariable& operator==(std::complex<double> a, solver::ComplexVariable& e);
 
-	std::complex<double> solve(solver::ComplexVariable x);
 };
 
 
