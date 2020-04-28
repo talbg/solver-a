@@ -33,7 +33,7 @@ RealVariable operator==(solver::RealVariable x, solver::RealVariable e){
 RealVariable operator==(double a, solver::RealVariable e){
     return e;
 }
-RealVariable RealVariable::operator==(onst RealVariable& x, double e){
+RealVariable RealVariable::operator==(const RealVariable& x, double e){
     return x;
 }
 ComplexVariable& operator+(solver::ComplexVariable& x, solver::ComplexVariable e){
