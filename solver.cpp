@@ -52,6 +52,7 @@ RealVariable solver::operator/(const RealVariable& x, const RealVariable& e){
     return x0;
 }
 RealVariable solver::operator^(const RealVariable& x, double e){
+    if(e>2) throw runtime_error("error");
     RealVariable x0;
     return x0;
 }
@@ -93,6 +94,7 @@ ComplexVariable solver::operator/(const ComplexVariable& x, double e){
     return x0;
 }
 ComplexVariable solver::operator^(const ComplexVariable& x, double e){
+    if(e>2) throw runtime_error("error");
     ComplexVariable x0;
     return x0;
 }
@@ -112,6 +114,6 @@ ComplexVariable solver::operator==(std::complex<double> a, const  ComplexVariabl
 double solver::solve(const RealVariable& Real){
     return 0;
 }
-std::complex<double> solver::solve(const ComplexVariable& Real){
+std::complex<double> solver::solve(const ComplexVariable& complex){
     return 0;
 }
