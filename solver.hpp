@@ -11,20 +11,16 @@ namespace solver{
 		 
 		friend RealVariable operator-(const RealVariable& x, double e) ;
         	friend RealVariable operator==(const RealVariable& x, double e);
+		friend RealVariable operator+(const RealVariable& x, const RealVariable e);
+		friend RealVariable operator+(const RealVariable& x, double e);
+		friend RealVariable operator-(const RealVariable& x, RealVariable e);
+		friend RealVariable operator/(const RealVariable& x, double e);
+		friend RealVariable operator^(const RealVariable& x, double e);
+		friend RealVariable operator==(const RealVariable& x, RealVariable e);
 	};
 	
-	
-        RealVariable operator*(double a, const RealVariable& e);
-	RealVariable operator+(solver::RealVariable x, solver::RealVariable e);
-	RealVariable operator+(solver::RealVariable x, double e);
 	RealVariable operator+(double x, solver::RealVariable e);
-
-	RealVariable operator-(solver::RealVariable x, solver::RealVariable e);
-
-	RealVariable operator/(solver::RealVariable x, double e);
-	RealVariable operator^(solver::RealVariable x, double e);
-
-	RealVariable operator==(solver::RealVariable x, solver::RealVariable e);
+       RealVariable operator*(double a, const RealVariable& e);
 	RealVariable operator==(double a, solver::RealVariable e);
 	
 	class ComplexVariable {
