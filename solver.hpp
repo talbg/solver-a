@@ -9,8 +9,8 @@ namespace solver{
 		RealVariable()
 		: a(0), b(0), c(0){}
 		 
-		RealVariable operator-(const RealVariable& x, double e) ;
-        	RealVariable operator==(const RealVariable& x, double e);
+		friend RealVariable operator-(const RealVariable& x, double e) ;
+        	friend RealVariable operator==(const RealVariable& x, double e);
 	};
 	
 	
