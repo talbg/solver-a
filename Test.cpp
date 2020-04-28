@@ -73,7 +73,7 @@ TEST_CASE(" linear complex equation ") {
 	ComplexVariable y;
 	
 	CHECK( solve( 5i+5.5 == 2*y+4i ) == 2.75+0.5i );
-	CHECK( solve( y-3i == 2*y-i ) == -2i );
+	CHECK( solve( y-3i == 2*y-i ) == 0-2i );
 	CHECK( solve( -5*y+4 == 3i+y ) == 2/5-0.5i );
 	CHECK( solve( 5*y+8i == 13*y+i/2 ) == 15i/16 );
 	CHECK( solve( 2.5*y+i == 4i ) == 6i/5 );
