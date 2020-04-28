@@ -83,7 +83,7 @@ ComplexVariable& operator==(std::complex<double> a, solver::ComplexVariable& e){
     return e;
 }
 
-double solve(solver::RealVariable Real){
+double solver::solve(const RealVariable& Real){
     return 0;
 }
 std::complex<double> solve(solver::ComplexVariable x){
