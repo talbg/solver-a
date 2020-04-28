@@ -3,6 +3,10 @@
 #include <cmath>
 using namespace solver;
 
+RealVariable solver::operator-(double e, const RealVariable& x ){
+    RealVariable x0;
+    return x0;
+}
 RealVariable solver::operator-(const RealVariable& x, double e){
     RealVariable x0;
     return x0;
