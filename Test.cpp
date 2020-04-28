@@ -88,19 +88,19 @@ TEST_CASE(" linear complex equation ") {
 	CHECK( solve( 12.2y+5 == 4i ) == 25/61+20i/61 );
 	CHECK( solve( y/3-i == 2*y+12 ) == 204/29-12i/29 );
 	CHECK( solve( y+4 == 3i+2 ) == -2+3i );
-	CHECK( solve( y+3+3i == 24y+i+1/2 ) ==  );
-	CHECK( solve( y == 4i/56 ) ==  );
-	CHECK( solve( y+i == -25 ) ==  );
-	CHECK( solve( 3i*4 == 5*y/2 ) ==  );
-	CHECK( solve( 8i-y == 21*y ) ==  );
-	CHECK( solve( i-y+10 == 2-4i ) ==  );
-	CHECK( solve( 3*y ==15+i) ==  );
+	CHECK( solve( y+3+3i == 24y+i+1/2 ) == 5/46+2i/23 );
+	CHECK( y == 4i/56 ) == i/14 );
+	CHECK( solve( y+i == -25 ) == -25-i );
+	CHECK( solve( 3i*4 == 5*y/2 ) == 24i/5 );
+	CHECK( solve( 8i-y == 21*y ) == 4i/11 );
+	CHECK( solve( i-y+10 == 2-4i ) == 8+5i );
+	CHECK( solve( 3*y ==15+i ) == 5+i/3} );
 	
-	CHECK( solve( 2*y+4i == 5i ) ==  );
-	CHECK( solve( 10i == y+3.4 ) ==  );
-	CHECK( solve( 5i-3*y-1 == 2y ) ==  );
-	CHECK( solve( 3*y == 5i/3 ) ==  );
-	CHECK( solve( 19+2i == y+i ) ==  );
+	CHECK( solve( 2*y+4i == 5i ) == i/2 );
+	CHECK( solve( 10i == y+3.4 ) == 10i-3.4 );
+	CHECK( solve( 5i-3*y-1 == 2y ) == -1/5+i );
+	CHECK( solve( 3*y == 5i/3 ) == 5i/9 );
+	CHECK( solve( 19+2i == y+i ) == 19+i );
 
 }
 
@@ -121,7 +121,7 @@ TEST_CASE(" complex quadratic equation ") {
 	CHECK( solve( 13y-2i == 6*(y^2) ) ==  );
 	CHECK( solve( -2i/3*(y^2) == -9 ) ==  );
 	CHECK( solve( 4i*6y == (y^2) ) ==  );
-	CHECK( solve( (y^2) == 1 ) ==  );
+	CHECK( solve( (y^2) == -1 ) ==  );
 	CHECK( solve( (y^2)-12 == 6i ) ==  );
 	CHECK( solve( (y^2) == -25 ) ==  );
 	CHECK( solve( (y^2) == 25 ) ==  );
@@ -129,7 +129,7 @@ TEST_CASE(" complex quadratic equation ") {
 	CHECK( solve( -(y^2) == 25 ) ==  );
 	CHECK( solve( 3*(y^2)/7i == 7i -3  ) ==  );
 	
-	error 
+	#error 
 	CHECK( solve( 3*(y^3) +i == 12 ) ==  );
 	CHECK( solve( 26-y/i == (y^4) ) ==  );
 	CHECK( solve( 14*(y^2) == i+3/4 ) ==  );
