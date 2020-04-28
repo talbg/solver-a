@@ -49,47 +49,47 @@ RealVariable operator==(double a, RealVariable e){
     return x0;
 }
 
-ComplexVariable& solver::operator+(const ComplexVariable& x, ComplexVariable e){
+ComplexVariable solver::operator+(const ComplexVariable& x, ComplexVariable e){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator+(const ComplexVariable& x, std::complex<double> e){
+ComplexVariable solver::operator+(const ComplexVariable& x, std::complex<double> e){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator+(std::complex<double> x, ComplexVariable& e){
+ComplexVariable solver::operator+(std::complex<double> x, ComplexVariable& e){
     ComplexVariable x0;
     return x0;
 } 
-ComplexVariable& solver::operator-(const ComplexVariable& x, ComplexVariable e){
+ComplexVariable solver::operator-(const ComplexVariable& x, ComplexVariable e){
     ComplexVariable x0;
     return x0;
 } 
-ComplexVariable& solver::operator-(const ComplexVariable& x, std::complex<double> e){
+ComplexVariable solver::operator-(const ComplexVariable& x, std::complex<double> e){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator*(std::complex<double> a, const  ComplexVariable& e1){
+ComplexVariable solver::operator*(std::complex<double> a, const  ComplexVariable& e1){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator/(const ComplexVariable& x, double e){
+ComplexVariable solver::operator/(const ComplexVariable& x, double e){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator^(const ComplexVariable& x, double e){
+ComplexVariable solver::operator^(const ComplexVariable& x, double e){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator==(const ComplexVariable& x, const ComplexVariable e){
+ComplexVariable solver::operator==(const ComplexVariable& x, const ComplexVariable e){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator==(const ComplexVariable& x, std::complex<double>){
+ComplexVariable solver::operator==(const ComplexVariable& x, std::complex<double>){
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable& solver::operator==(std::complex<double> a, const  ComplexVariable e){
+ComplexVariable solver::operator==(std::complex<double> a, const  ComplexVariable e){
     ComplexVariable x0;
     return x0;
 }
