@@ -21,9 +21,9 @@ namespace solver{
 		friend double solve(const RealVariable& Real);
 	};
 	
-	RealVariable operator+(double x, solver::RealVariable e);
-       RealVariable operator*(double a, const RealVariable& e);
-	RealVariable operator==(double a, solver::RealVariable e);
+	RealVariable operator+(double x, const RealVariable& e);
+       	RealVariable operator*(double a, const RealVariable& e);
+	RealVariable operator==(double a, RealVariable e);
 	
 	class ComplexVariable {
 	public:
