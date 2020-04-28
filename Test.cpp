@@ -3,6 +3,8 @@
 #include <complex>
 #include "solver.hpp"
 
+using namespace solver;
+
 TEST_CASE(" linear real equation ") {
 	RealVariable x;
 	
