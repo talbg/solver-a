@@ -3,6 +3,7 @@
 #include <complex>
 #include "solver.hpp"
 
+using namespace std;
 using namespace solver;
 
 TEST_CASE(" linear real equation ") {
