@@ -116,21 +116,21 @@ TEST_CASE(" complex quadratic equation ") {
 	CHECK( solve( -y +3(i^2) == i) ==  );
 	CHECK( solve( 5i+5*(y^2) == 5y ) ==  );
 	
-	CHECK( solve( 13y-2i == 6*(y^2) ) ==  );
-	CHECK( solve( -2i/3*(y^2) == -9 ) ==  );
-	CHECK( solve( 4i*6y == (y^2) ) ==  );
-	CHECK( solve( (y^2) == -1 ) ==  );
+		CHECK( solve( -2y+i == i*(y^2) ) == i );
+	CHECK( solve( (y^2) == -9 ) == 3i ||  solve( -2i/3*(y^2) == -9 ) == -3i );
+	CHECK( solve( y == i*(y^2)-6i ) == 5/2-i/2 || solve( y == i*(y^2)-6i ) == -5/2-i/2 );
+	CHECK( solve( (y^2) == -25 ) == 5i || solve( (y^2) == -25 ) == -5i );
 	CHECK( solve( (y^2)-12 == 6i ) ==  );
-	CHECK( solve( (y^2) == -25 ) ==  );
-	CHECK( solve( (y^2) == 25 ) ==  );
-	CHECK( solve( -(y^2) == -25 ) ==  );
-	CHECK( solve( -(y^2) == 25 ) ==  );
-	CHECK( solve( 3*(y^2)/7i == 7i -3  ) ==  );
+	CHECK( solve( (y^2)-(60+2i)/2 == i-30 ) == 1+i || solve( (y^2)-(60+2i)/2 == i-30) == -1-i);
+	CHECK( solve( (y^2)-i*y == 5 ) == 2+i || solve( (y^2)-i*y == 5 ) == -2+i );
+	CHECK( solve( -(y^2) == -6-i*y ) == 5/2+0.5i || solve( -(y^2) == -6-i*y ) == -5/2+0.5i );
+	CHECK( solve( i*(y^2)-5y == 4i ) == -4i || solve( i*(y^2)-5y == 4i ) == -i );
+	CHECK( solve( -1*(y^2)/10i == -0.1i ) == i || solve( -1*(y^2)/10i == -0.1i ) == -i );
 	
 	#error 
-	CHECK( solve( 3*(y^3) +i == 12 ) ==  );
-	CHECK( solve( 26-y/i == (y^4) ) ==  );
-	CHECK( solve( 14*(y^2) == i+3/4 ) ==  );
-	CHECK( solve( 2+3y+2*(y^2) == i  ) ==  );
-	CHECK( solve( -y +3(i^3) == 0 ) ==  );
+	CHECK_THROWS( solve( 3*(y^6)+i == 12 ) );
+	CHECK_THROWS( solve( 26-y == (y^4) ) );
+	CHECK_THROWS( solve( 14*(y^3) == i+3/4 ) );
+	CHECK_THROWS( solve( 2+3y+2*(y^12) == i  ) );
+	CHECK_THROWS( solve( -i+3(y^3) == 0 ) );
 }
