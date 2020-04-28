@@ -63,9 +63,9 @@ TEST_CASE(" real Quadratic equation ") {
 	CHECK_THROWS( solve( 5*x == 10+(x^2) )  );
 	CHECK_THROWS( solve( 2*x/10*(x^3) == 10 ) );
 	CHECK_THROWS( solve( 4*(x^4) == 1-16*(x^2)/4 ) );
-	CHECK_THROWS( solve( (x^2)-5(x^2) == (x^4) ) );
+	CHECK_THROWS( solve( (x^2)-5*(x^2) == (x^4) ) );
 	CHECK_THROWS( solve( (x^2)/0 == -8 ) );
-	CHECK_THROWS( solve( 3*(x^3)/3*x == x+2 ) );
+	CHECK_THROWS( solve( 3*(x^3) == x+2 ) );
 }
 
 TEST_CASE(" linear complex equation ") {
