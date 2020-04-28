@@ -45,9 +45,9 @@ namespace solver{
 		
 		friend std::complex<double> solve(const ComplexVariable& x);	
 	};
-	ComplexVariable operator+ (std::complex<double> x, ComplexVariable& e);
-	ComplexVariable operator* (std::complex<double> a, ComplexVariable& e1);
-	ComplexVariable operator==(std::complex<double> a, ComplexVariable e);
+	ComplexVariable operator+ (std::complex<double> x, const  ComplexVariable& e);
+	ComplexVariable operator* (std::complex<double> a, const  ComplexVariable& e1);
+	ComplexVariable operator==(std::complex<double> a, const  ComplexVariable e);
 
 };
 
