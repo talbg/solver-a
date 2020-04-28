@@ -14,6 +14,7 @@ namespace solver{
 		friend RealVariable operator+(const RealVariable& x, RealVariable e);
 		friend RealVariable operator+(const RealVariable& x, double e);
 		friend RealVariable operator-(const RealVariable& x, RealVariable e);
+// 		friend RealVariable operator* (const RealVariable& x, double e);
 		friend RealVariable operator/(const RealVariable& x, double e);
 		friend RealVariable operator^(const RealVariable& x, double e);
 		friend RealVariable operator==(const RealVariable& x, RealVariable e);
@@ -24,7 +25,6 @@ namespace solver{
        	RealVariable operator*(double a, const RealVariable& e);
 	RealVariable operator==(double a, RealVariable e);
 	
-	
 	double solve(const RealVariable& Real);
 	
 	class ComplexVariable {
@@ -33,20 +33,21 @@ namespace solver{
 		
 		ComplexVariable()
 		: a(0), b(0), c(0){}
-		friend ComplexVariable operator+(const ComplexVariable& x, std::complex<double> e);
-		friend ComplexVariable operator-(const ComplexVariable& x, std::complex<double> e);
-		friend ComplexVariable operator/(const ComplexVariable& x, double e);
-		friend ComplexVariable operator^(const ComplexVariable& x, double e);
-		friend ComplexVariable operator+(const ComplexVariable& x, solver::ComplexVariable e);
-		friend ComplexVariable operator-(const ComplexVariable& x, solver::ComplexVariable e);
-		friend ComplexVariable operator==(const ComplexVariable& x, solver::ComplexVariable e);
+		friend ComplexVariable operator+ (const ComplexVariable& x, std::complex<double> e);
+		friend ComplexVariable operator+ (const ComplexVariable& x, ComplexVariable e);
+		friend ComplexVariable operator- (const ComplexVariable& x, ComplexVariable e);
+		friend ComplexVariable operator- (const ComplexVariable& x, std::complex<double> e);
+		friend ComplexVariable operator* (const ComplexVariable& e1, std::complex<double> a,);
+		friend ComplexVariable operator/ (const ComplexVariable& x, double e);
+		friend ComplexVariable operator^ (const ComplexVariable& x, double e);
+		friend ComplexVariable operator==(const ComplexVariable& x, ComplexVariable e);
 		friend ComplexVariable operator==(const ComplexVariable& x, std::complex<double>);
 		
 		friend std::complex<double> solve(const ComplexVariable& x);	
 	};
-	ComplexVariable& operator+(std::complex<double> x, solver::ComplexVariable e);
-	ComplexVariable& operator*(std::complex<double> a, solver::ComplexVariable& e1);
-	ComplexVariable& operator==(std::complex<double> a, solver::ComplexVariable& e);
+	ComplexVariable operator+ (std::complex<double> x, ComplexVariable& e);
+	ComplexVariable operator* (std::complex<double> a, ComplexVariable& e1);
+	ComplexVariable operator==(std::complex<double> a, ComplexVariable e);
 
 };
 
