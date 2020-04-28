@@ -16,11 +16,11 @@ RealVariable solver::operator*(double a, const RealVariable& e){
     return x;
 }
 
-RealVariable operator+(const RealVariable& x, RealVariable e){
+RealVariable solver::operator+(const RealVariable& x, RealVariable e){
     RealVariable x0;
     return x0;
 }
-RealVariable operator+(const RealVariable& x, double e){
+RealVariable solver::operator+(const RealVariable& x, double e){
     RealVariable x0;
     return x0;
 }
@@ -28,19 +28,19 @@ RealVariable operator+(double x, RealVariable e){
     RealVariable x0;
     return x0;
 }
-RealVariable operator-(const RealVariable& x, RealVariable e){
+RealVariable solver::operator-(const RealVariable& x, RealVariable e){
     RealVariable x0;
     return x0;
 }
-RealVariable operator/(const RealVariable& x, double e){
+RealVariable solver::operator/(const RealVariable& x, double e){
     RealVariable x0;
     return x0;
 }
-RealVariable operator^(const RealVariable& x, double e){
+RealVariable solver::operator^(const RealVariable& x, double e){
     RealVariable x0;
     return x0;
 }
-RealVariable operator==(const RealVariable& x, RealVariable e){
+RealVariable solver::operator==(const RealVariable& x, RealVariable e){
     RealVariable x0;
     return x0;
 }
