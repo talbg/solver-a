@@ -17,7 +17,7 @@ namespace solver{
 // 		friend RealVariable operator* (const RealVariable& x, double e);
 		friend RealVariable operator/(const RealVariable& x, double e);
 		friend RealVariable operator^(const RealVariable& x, double e);
-		friend RealVariable operator==(const RealVariable& x, RealVariable e);
+		friend RealVariable operator==(const RealVariable& x, const RealVariable& e);
 		
 	};
 	
