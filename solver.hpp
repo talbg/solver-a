@@ -9,12 +9,12 @@ namespace solver{
 		RealVariable()
 		: a(0), b(0), c(0){}
 		 
+		RealVariable operator-(double e) ;
+        	RealVariable operator==(double e);
 	};
 	
 	
-	RealVariable solver::operator-(const RealVariable& x, double e) ;
-        RealVariable solver::operator*(double a, const RealVariable& e);
-        RealVariable solver::operator==(const RealVariable& x, double e);
+        RealVariable operator*(double a, const RealVariable& e);
 	RealVariable operator+(solver::RealVariable x, solver::RealVariable e);
 	RealVariable operator+(solver::RealVariable x, double e);
 	RealVariable operator+(double x, solver::RealVariable e);
