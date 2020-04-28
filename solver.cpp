@@ -3,6 +3,19 @@
 #include <cmath>
 using namespace solver;
 
+RealVariable solver::operator-(double e){
+    RealVariable x;
+    return x;
+}
+RealVariable solver::operator==(double e){
+    RealVariable x;
+    return x;
+}
+RealVariable solver::operator*(double a, const RealVariable& e){
+    RealVariable x;
+    return x;
+}
+
 RealVariable operator+(solver::RealVariable x, solver::RealVariable e){
     return x;
 }
@@ -12,14 +25,8 @@ RealVariable operator+(solver::RealVariable x, double e){
 RealVariable operator+(double x, solver::RealVariable e){
     return e;
 }
-RealVariable solver::operator-(const RealVariable& x, double e){
-    return RealVariable();
-}
 RealVariable operator-(solver::RealVariable x, solver::RealVariable e){
     return x;
-}
-RealVariable solver::operator*(double a, const RealVariable& e){
-    return RealVariable();
 }
 RealVariable operator/(solver::RealVariable x, double e){
     return x;
@@ -32,9 +39,6 @@ RealVariable operator==(solver::RealVariable x, solver::RealVariable e){
 }
 RealVariable operator==(double a, solver::RealVariable e){
     return e;
-}
-RealVariable solver::operator==(const RealVariable& x, double e){
-    return RealVariable();
 }
 ComplexVariable& operator+(solver::ComplexVariable& x, solver::ComplexVariable e){
     return x;
