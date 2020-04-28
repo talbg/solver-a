@@ -60,7 +60,6 @@ TEST_CASE(" real Quadratic equation ") {
 	CHECK( solve( (x^2)+5*(x^2) == 6 ) == 1 || solve( (x^2)+5*(x^2) == 6 ) == -1 );
 	CHECK( solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 4/3 || solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 0 );
 	
-	error
 	CHECK_THROWS( solve( 5*x == 10+(x^2) )  );
 	CHECK_THROWS( solve( 2*x/10*(x^3) == 10 ) );
 	CHECK_THROWS( solve( 4*(x^4) == 1-16*(x^2)/4 ) );
@@ -126,8 +125,7 @@ TEST_CASE(" complex quadratic equation ") {
 	CHECK( solve( -(y^2) == -6-i*y ) == 5/2+0.5i || solve( -(y^2) == -6-i*y ) == -5/2+0.5i );
 	CHECK( solve( i*(y^2)-5y == 4i ) == -4i || solve( i*(y^2)-5y == 4i ) == -i );
 	CHECK( solve( -1*(y^2)/10i == -0.1i ) == i || solve( -1*(y^2)/10i == -0.1i ) == -i );
-	
-	#error 
+	 
 	CHECK_THROWS( solve( 3*(y^6)+i == 12 ) );
 	CHECK_THROWS( solve( 26-y == (y^4) ) );
 	CHECK_THROWS( solve( 14*(y^3) == i+3/4 ) );
