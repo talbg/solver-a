@@ -50,7 +50,7 @@ TEST_CASE(" real Quadratic equation ") {
 	CHECK( solve( 4*(x^2) == -16*(x^2)/4 ) == 0 );
 	CHECK( solve( 20*(x^2)*4 == 8 ) == 0.31622 ||solve( 20*(x^2)*4 == 8 ) == -0.31622 );
 	CHECK( solve( (x^2)-7*x+7== 14 ) == 9.70483 ||solve( (x^2)-7*x+7== 14 ) == -2.70483 );
-	CHECK( solve( 5+3*(x^2) == 8*x ) == 1 || solve( 5+3*(x^2) == 1.66666 );
+	CHECK( solve( 5+3*(x^2) == 8*x ) == 1 || solve( 5+3*(x^2) == 8*x ) == 1.66666 );
 	CHECK( solve( 3*(x^2)-4*x == 0 ) == 0 || 3*(x^2)-4*x == 0 ) == 1.33333 );
 	CHECK( solve( -4*x+12 == 8*(x^2)  ) == 1 || solve( -4*x+12 == 8*(x^2)  ) == -1.5 );
 	CHECK( solve( 10*(x^2)/10*x == 1 ) == 1  );
