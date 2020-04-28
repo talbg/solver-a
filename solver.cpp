@@ -57,7 +57,7 @@ ComplexVariable solver::operator+(const ComplexVariable& x, std::complex<double>
     ComplexVariable x0;
     return x0;
 }
-ComplexVariable solver::operator+(std::complex<double> x, ComplexVariable& e){
+ComplexVariable solver::operator+(std::complex<double> x, const ComplexVariable& e){
     ComplexVariable x0;
     return x0;
 } 
