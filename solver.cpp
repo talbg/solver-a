@@ -81,10 +81,6 @@ ComplexVariable solver::operator-(const ComplexVariable& x, ComplexVariable e){
     ComplexVariable x0;
     return x0;
 } 
-ComplexVariable solver::operator-(const ComplexVariable& x, ComplexVariable e){
-    ComplexVariable x0;
-    return x0;
-} 
 // ComplexVariable solver::operator-(double e , std::complex<double> x){
 //     ComplexVariable x0;
 //     return x0;
