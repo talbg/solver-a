@@ -17,6 +17,8 @@ namespace solver{
 		friend RealVariable operator/(const RealVariable& x, double e);
 		friend RealVariable operator^(const RealVariable& x, double e);
 		friend RealVariable operator==(const RealVariable& x, RealVariable e);
+		
+		friend double solve(const RealVariable& Real);
 	};
 	
 	RealVariable operator+(double x, solver::RealVariable e);
@@ -45,7 +47,6 @@ namespace solver{
 	ComplexVariable& operator*(std::complex<double> a, solver::ComplexVariable& e1);
 	ComplexVariable& operator==(std::complex<double> a, solver::ComplexVariable& e);
 
-	double solve(solver::RealVariable Real);
 	std::complex<double> solve(solver::ComplexVariable x);
 };
 
