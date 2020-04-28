@@ -24,7 +24,7 @@ RealVariable solver::operator+(const RealVariable& x, double e){
     RealVariable x0;
     return x0;
 }
-RealVariable operator+(double x, , const RealVariable& e){
+RealVariable operator+(double x, const RealVariable& e){
     RealVariable x0;
     return x0;
 }
