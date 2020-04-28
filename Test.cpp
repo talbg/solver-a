@@ -41,34 +41,32 @@ TEST_CASE(" real Quadratic equation ") {
 	RealVariable x;
 	CHECK( solve(12+5.1*x == 5*x+2) == -100.0 );
 	CHECK( solve( 17*(x^2) == 17 ) == 1 || solve( 17*(x^2) == 17 ) == -1   );
-	CHECK( solve( (x^2)+5 == 30 ) == 5 or -5  );
-	CHECK( solve( 3*(x^2)-6*x == 9 ) == 3 or -1 );
+	CHECK( solve( (x^2)+5 == 30 ) == 5 ||solve( (x^2)+5 == 30 ) == -5  );
+	CHECK( solve( 3*(x^2)-6*x == 9 ) == 3 || solve( 3*(x^2)-6*x == 9 ) == -1 );
 	CHECK( solve( 4*(x^2)/2 == 12*x^2/4 ) == 0  );
-	CHECK( solve( 21*(x^2)-6*(x^2)+x-5 == 13 ) == 1.06261 or -1.12928  );
-	CHECK( solve( 10*(x^2)/2*x == 12*x/2+2 ) == 0 or 0.63245 or -0.63245  );
-	CHECK( solve( 5*(x^2)-3*x == 14*x ) == 3.4 or 0  );
+	CHECK( solve( 21*(x^2)-6*(x^2)+x-5 == 13 ) == 1.06261 || solve( 21*(x^2)-6*(x^2)+x-5 == 13 ) == -1.12928  );
+	CHECK( solve( 10*(x^2)/2*x == 12*x/2+2 ) == 0 ||solve( 10*(x^2)/2*x == 12*x/2+2 ) == 0.63245 ||solve( 10*(x^2)/2*x == 12*x/2+2 ) == -0.63245  );
+	CHECK( solve( 5*(x^2)-3*x == 14*x ) == 3.4 || solve( 5*(x^2)-3*x == 14*x ) == 0  );
 	CHECK( solve( 4*(x^2) == -16*(x^2)/4 ) == 0 );
-	CHECK( solve( 20*(x^2)*4 == 8 ) == 0.31622 or -0.31622 );
-	CHECK( solve( (x^2)-7*x+7== 14 ) == 9.70483 or -2.70483 );
-	
-	CHECK( solve( 5+3*(x^2) == 8*x ) == 1 or 1.66666 );
-	CHECK( solve( 3*(x^2)-4*x == 0 ) == 0 or 1.33333 );
-	CHECK( solve( -4*x+12 == 8*(x^2)  ) == 1 or -1.5 );
-	CHECK( solve( 2*x/10*(x^2) == 1 ) ==  );
-	CHECK( solve( 11*(x^2) == 30*x/3 ) ==  );
-	CHECK( solve( 25*(x^2)/5 == 22*x/2+x ) ==  );
-	CHECK( solve( (x^2)+x == x+5*x-3  ) ==  );
-	CHECK( solve( 5*x == 10+(x^2) ) ==  );
-	CHECK( solve( (x^2)-5*(x^2) == 6 ) ==  );
-	CHECK( solve( 6*x/2*(x^2) == 12*(x^2)/3 ) ==  );
+	CHECK( solve( 20*(x^2)*4 == 8 ) == 0.31622 ||solve( 20*(x^2)*4 == 8 ) == -0.31622 );
+	CHECK( solve( (x^2)-7*x+7== 14 ) == 9.70483 ||solve( (x^2)-7*x+7== 14 ) == -2.70483 );
+	CHECK( solve( 5+3*(x^2) == 8*x ) == 1 || solve( 5+3*(x^2) == 1.66666 );
+	CHECK( solve( 3*(x^2)-4*x == 0 ) == 0 || 3*(x^2)-4*x == 0 ) == 1.33333 );
+	CHECK( solve( -4*x+12 == 8*(x^2)  ) == 1 || solve( -4*x+12 == 8*(x^2)  ) == -1.5 );
+	CHECK( solve( 10*(x^2)/10*x == 1 ) == 1  );
+	CHECK( solve( 11*(x^2) == 30*x/3 ) == 10/11 || solve( 11*(x^2) == 30*x/3 ) == 0 );
+	CHECK( solve( 25*(x^2) == 22*x/2 ) == 11/25 || solve( 25*(x^2) == 22*x/2 ) == 0  );
+	CHECK( solve( (x^2)+x == x+5*x-3  ) == 4.3027 || solve( (x^2)+x == x+5*x-3  ) == 0.6972  );
+	CHECK( solve( (x^2)+5*(x^2) == 6 ) == 1 || solve( (x^2)+5*(x^2) == 6 ) == -1 );
+	CHECK( solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 4/3 || solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 0 );
 	
 	error
-
+	CHECK_THROWS( solve( 5*x == 10+(x^2) )  );
 	CHECK_THROWS( solve( 2*x/10*(x^3) == 10 ) );
-	CHECK_THROWS( solve( 4*(x^2) == 1-16*(x^2)/4 ) );
+	CHECK_THROWS( solve( 4*(x^4) == 1-16*(x^2)/4 ) );
 	CHECK_THROWS( solve( (x^2)-5(x^2) == (x^4) ) );
 	CHECK_THROWS( solve( (x^2)/0 == -8 ) );
-	CHECK_THROWS( solve( 3*(x^2)/3*x == x+2 ) );
+	CHECK_THROWS( solve( 3*(x^3)/3*x == x+2 ) );
 }
 
 TEST_CASE(" linear complex equation ") {
