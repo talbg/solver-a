@@ -87,7 +87,7 @@ TEST_CASE(" linear complex equation ") {
 	CHECK( solve( y/3-i == 2*y+12 ) == 204/29-12i/29 );
 	CHECK( solve( y+4 == 3i+2 ) == -2+3i );
 	CHECK( solve( y+3+3i == 24y+i+1/2 ) == 5/46+2i/23 );
-	CHECK( y == 4i/56 ) == i/14 );
+	CHECK( solve (y == 4i/56 ) == i/14 );
 	CHECK( solve( y+i == -25 ) == -25-i );
 	CHECK( solve( 3i*4 == 5*y/2 ) == 24i/5 );
 	CHECK( solve( 8i-y == 21*y ) == 4i/11 );
@@ -105,18 +105,18 @@ TEST_CASE(" linear complex equation ") {
 TEST_CASE(" complex quadratic equation ") {
 	ComplexVariable x;
 	
-	CHECK( solve( 5*(y^2)+i == 10 ) ==  );
-	CHECK( solve( 2i == -5*(y^2) ) ==  );
-	CHECK( solve( 3(i^2)/5y^2 == 12(i^2)*y ) ==  );
-	CHECK( solve( 12*y == (i^2)-i ) ==  );
-	CHECK( solve( 3*(y^2) +i == 12 ) ==  );
-	CHECK( solve( 26-y/i == (y^2) ) ==  );
-	CHECK( solve( 14*(y^2) == i+3/4 ) ==  );
-	CHECK( solve( 2+y+2*(y^2) == i  ) ==  );
-	CHECK( solve( -y +3(i^2) == i) ==  );
-	CHECK( solve( 5i+5*(y^2) == 5y ) ==  );
+	CHECK( solve( 5*(y^2)+i == 10 + i ) == -1.4142 || solve( 5*(y^2)+i == 10 + i ) == 1.4142   );
+	CHECK( solve( 16 + i == i + (y^2) ) == 4 || solve( 16 + i == i + (y^2) ) == -4 );
+	CHECK( solve( 3(i^2)/5y^2 == 12(i^2)*y ) == 20 || 3(i^2)/5y^2 == 12(i^2)*y ) == 0 );
+	CHECK( solve( 12*y == (i^2)-i ) ==  -1/12 - i/12);
+	CHECK( solve( (y^2) - 2*y - y*i-1== -7i  ) == -1+2i || solve( (y^2) - 2*y - y*i-1== -7i  ) == 3-i );
+	CHECK( solve( (y^2) - 3*y -2i*y== -i-5  ) == 1-i || solve( (y^2) - 3*y -2i*y== -i-5  ) == 2+3i  );
+	CHECK( solve( 2*(y^2) - 11*y+2i == -14-i+3i ) == 3.5 || solve( 2*(y^2) - 11*y+2i == -14-i+3i ) == 2  );
+	CHECK( solve( 3*(y^2) == -6  ) == 1.4142i || solve( 3*(y^2) == -6  ) == -1.4142i  );
+	CHECK( solve( 5*(y^2) -4*y == -1) == 2/5 - i/5 || solve( 5*(y^2) -4*y == -1) == 2/5 + i/5  );
+	CHECK( solve( (y^2) == 4*y - 5 ) == 2+i || solve( (y^2) == 4*y - 5 ) == 2-i  ); 
 	
-		CHECK( solve( -2y+i == i*(y^2) ) == i );
+	CHECK( solve( -2y+i == i*(y^2) ) == i );
 	CHECK( solve( (y^2) == -9 ) == 3i ||  solve( -2i/3*(y^2) == -9 ) == -3i );
 	CHECK( solve( y == i*(y^2)-6i ) == 5/2-i/2 || solve( y == i*(y^2)-6i ) == -5/2-i/2 );
 	CHECK( solve( (y^2) == -25 ) == 5i || solve( (y^2) == -25 ) == -5i );
