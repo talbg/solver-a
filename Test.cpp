@@ -41,26 +41,26 @@ TEST_CASE(" linear real equation ") {
 TEST_CASE(" real Quadratic equation ") {
 	RealVariable x;
 	CHECK( solve(12+5.1*x == 5*x+2) == -100.0 );
-	CHECK( solve( 17*(x^2) == 17 ) == 1 || solve( 17*(x^2) == 17 ) == -1   );
-	CHECK( solve( (x^2)+5 == 30 ) == 5 ||solve( (x^2)+5 == 30 ) == -5  );
-	CHECK( solve( 3*(x^2)-6*x == 9 ) == 3 || solve( 3*(x^2)-6*x == 9 ) == -1 );
-	CHECK( solve( 4*(x^2)/2 == 12*x^2/4 ) == 0  );
-	CHECK( solve( 21*(x^2)-6*(x^2)+x-5 == 13 ) == 1.06261 || solve( 21*(x^2)-6*(x^2)+x-5 == 13 ) == -1.12928  );
-	CHECK( solve( 10*(x^2)/(2*x) == 12*x/2+2 ) == 0 || solve( 10*(x^2)/(2*x) == 12*x/2+2 ) == 0.63245 || solve( 10*(x^2)/(2*x) == 12*x/2+2 ) == -0.63245  );
-	CHECK( solve( 5*(x^2)-3*x == 14*x ) == 3.4 || solve( 5*(x^2)-3*x == 14*x ) == 0  );
+	CHECK( (solve( 17*(x^2) == 17 ) == 1 || solve( 17*(x^2) == 17 ) == -1)   );
+	CHECK( (solve( (x^2)+5 == 30 ) == 5 ||solve( (x^2)+5 == 30 ) == -5 ) );
+	CHECK( (solve( 3*(x^2)-6*x == 9 ) == 3 || solve( 3*(x^2)-6*x == 9 ) == -1) );
+	CHECK( solve( 4*(x^2)/2 == 12*x^2/4 ) == 0 ) ;
+	CHECK( (solve( 21*(x^2)-6*(x^2)+x-5 )== 13 == 1.06261 || solve( 21*(x^2)-6*(x^2)+x-5 == 13 ) == -1.12928 ) );
+	CHECK( (solve( 10*(x^2)/(2*x) == 12*x/2+2 ) == 0 || solve( 10*(x^2)/(2*x) == 12*x/2+2 ) == 0.63245 || solve( 10*(x^2)/(2*x) == 12*x/2+2 ) == -0.63245)  );
+	CHECK( (solve( 5*(x^2)-3*x == 14*x ) == 3.4 || solve( 5*(x^2)-3*x == 14*x ) == 0 ) );
 	CHECK( solve( 4*(x^2) == -16*(x^2)/4 ) == 0 );
-	CHECK( solve( 20*(x^2)*4 == 8 ) == 0.31622 ||solve( 20*(x^2)*4 == 8 ) == -0.31622 );
-	CHECK( solve( (x^2)-7*x+7== 14 ) == 9.70483 ||solve( (x^2)-7*x+7== 14 ) == -2.70483 );
-	CHECK( solve( 5+3*(x^2) == 8*x ) == 1 || solve( 5+3*(x^2) == 8*x ) == 1.66666 );
-	CHECK( solve( 3*(x^2)-4*x == 0 ) == 0 || solve( 3*(x^2)-4*x == 0 ) == 1.33333 );
-	CHECK( solve( -4*x+12 == 8*(x^2)  ) == 1 || solve( -4*x+12 == 8*(x^2)  ) == -1.5 );
+	CHECK( (solve( 20*(x^2)*4 == 8 ) == 0.31622 || solve( 20*(x^2)*4 == 8 ) == -0.31622) );
+	CHECK( (solve( (x^2)-7*x+7== 14 ) == 9.70483 ||solve( (x^2)-7*x+7== 14 ) == -2.70483) );
+	CHECK( (solve( 5+3*(x^2) == 8*x ) == 1 || solve( 5+3*(x^2) == 8*x ) == 1.66666) );
+	CHECK( (solve( 3*(x^2)-4*x == 0 ) == 0 || solve( 3*(x^2)-4*x == 0 ) == 1.33333 ));
+	CHECK( (solve( -4*x+12 == 8*(x^2)  ) == 1 || solve( -4*x+12 == 8*(x^2)  ) == -1.5) );
 	CHECK( solve( 10*(x^2)/10*x == 1 ) == 1  );
-	CHECK( solve( 11*(x^2) == 30*x/3 ) == 10/11 || solve( 11*(x^2) == 30*x/3 ) == 0 );
-	CHECK( solve( 25*(x^2) == 22*x/2 ) == 11/25 || solve( 25*(x^2) == 22*x/2 ) == 0  );
-	CHECK( solve( (x^2)+x == x+5*x-3  ) == 4.3027 || solve( (x^2)+x == x+5*x-3  ) == 0.6972  );
-	CHECK( solve( (x^2)+5*(x^2) == 6 ) == 1 || solve( (x^2)+5*(x^2) == 6 ) == -1 );
-	CHECK( solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 4/3 || solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 0 );
-	
+	CHECK( (solve( 11*(x^2) == 30*x/3 ) == 10/11 || solve( 11*(x^2) == 30*x/3 ) == 0 ));
+	CHECK( (solve( 25*(x^2) == 22*x/2 ) == 11/25 || solve( 25*(x^2) == 22*x/2 ) == 0  ));
+	CHECK( (solve( (x^2)+x == x+5*x-3  ) == 4.3027 || solve( (x^2)+x == x+5*x-3  ) == 0.6972)  );
+	CHECK( (solve( (x^2)+5*(x^2) == 6 ) == 1 || solve( (x^2)+5*(x^2) == 6 ) == -1 ));
+	CHECK( (solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 4/3 || solve( 6*x/2*(x^2) == 12*(x^2)/3 ) == 0) );
+
 	CHECK_THROWS( solve( 5*x == 10+(x^2) )  );
 	CHECK_THROWS( solve( 2*x/10*(x^3) == 10 ) );
 	CHECK_THROWS( solve( 4*(x^4) == 1-16*(x^2)/4 ) );
@@ -77,7 +77,7 @@ TEST_CASE(" linear complex equation ") {
 	CHECK( solve( 5*y+8i == 13*y+0.5i ) == 0.9375i);
 	CHECK( solve( 2.5*y+1i == 4i ) == 1.2i );
 	CHECK( solve( -1*y == 15i-3*y ) == 7.5i );
-	CHECK( solve( 3*y/2 == 2+2*y/2 ) == 4 );
+	CHECK( solve( 3*y/2 == 2+2*y/2 ) == 4.0 );
 	CHECK( solve( 22*y/1.1 == 2i+3*y ) == 0.11764i );
 	CHECK( solve( -2*y+12+12i == 5*y+1-4i ) == 1.5714 + 2.2857i);
 	CHECK( solve( 20*y == 1.0-15i ) == 0.05-1.2i );
@@ -101,34 +101,34 @@ TEST_CASE(" linear complex equation ") {
 
 }
 
-//TEST_CASE(" complex quadratic equation ") {
-//	ComplexVariable x;
-//
-//	CHECK( solve( 5*(y^2)+i == 10 + i ) == -1.4142 || solve( 5*(y^2)+i == 10 + i ) == 1.4142   );
-//	CHECK( solve( 16 + i == i + (y^2) ) == 4 || solve( 16 + i == i + (y^2) ) == -4 );
-//	CHECK( solve( 3(i^2)/5y^2 == 12(i^2)*y ) == 20 || 3(i^2)/5y^2 == 12(i^2)*y ) == 0 );
-//	CHECK( solve( 12*y == (i^2)-i ) ==  -1/12 - i/12);
-//	CHECK( solve( (y^2) - 2*y - y*i-1== -7i  ) == -1+2i || solve( (y^2) - 2*y - y*i-1== -7i  ) == 3-i );
-//	CHECK( solve( (y^2) - 3*y -2i*y== -i-5  ) == 1-i || solve( (y^2) - 3*y -2i*y== -i-5  ) == 2+3i  );
-//	CHECK( solve( 2*(y^2) - 11*y+2i == -14-i+3i ) == 3.5 || solve( 2*(y^2) - 11*y+2i == -14-i+3i ) == 2  );
-//	CHECK( solve( 3*(y^2) == -6  ) == 1.4142i || solve( 3*(y^2) == -6  ) == -1.4142i  );
-//	CHECK( solve( 5*(y^2) -4*y == -1) == 2/5 - i/5 || solve( 5*(y^2) -4*y == -1) == 2/5 + i/5  );
-//	CHECK( solve( (y^2) == 4*y - 5 ) == 2+i || solve( (y^2) == 4*y - 5 ) == 2-i  );
-//
-//	CHECK( solve( -2y+i == i*(y^2) ) == i );
-//	CHECK( solve( (y^2) == -9 ) == 3i ||  solve( -2i/3*(y^2) == -9 ) == -3i );
-//	CHECK( solve( y == i*(y^2)-6i ) == 5/2-i/2 || solve( y == i*(y^2)-6i ) == -5/2-i/2 );
-//	CHECK( solve( (y^2) == -25 ) == 5i || solve( (y^2) == -25 ) == -5i );
-//	CHECK( solve( (y^2)-12 == 6i ) ==  );
-//	CHECK( solve( (y^2)-(60+2i)/2 == i-30 ) == 1+i || solve( (y^2)-(60+2i)/2 == i-30) == -1-i);
-//	CHECK( solve( (y^2)-i*y == 5 ) == 2+i || solve( (y^2)-i*y == 5 ) == -2+i );
-//	CHECK( solve( -(y^2) == -6-i*y ) == 5/2+0.5i || solve( -(y^2) == -6-i*y ) == -5/2+0.5i );
-//	CHECK( solve( i*(y^2)-5y == 4i ) == -4i || solve( i*(y^2)-5y == 4i ) == -i );
-//	CHECK( solve( -1*(y^2)/10i == -0.1i ) == i || solve( -1*(y^2)/10i == -0.1i ) == -i );
-//
-//	CHECK_THROWS( solve( 3*(y^6)+i == 12 ) );
-//	CHECK_THROWS( solve( 26-y == (y^4) ) );
-//	CHECK_THROWS( solve( 14*(y^3) == i+3/4 ) );
-//	CHECK_THROWS( solve( 2+3y+2*(y^12) == i  ) );
-//	CHECK_THROWS( solve( -i+3(y^3) == 0 ) );
-//}
+TEST_CASE(" complex quadratic equation ") {
+	ComplexVariable y;
+
+	CHECK( (solve( 5*(y^2)+1i == 10.0 + 1i ) == -1.4142 || solve( 5*(y^2)+1i == 10.0 + 1i ) == 1.4142)   );
+	CHECK( solve( 16 + i == i + (y^2) ) == 4 || solve( 16 + i == i + (y^2) ) == -4 );
+	CHECK( solve( 3(i^2)/5y^2 == 12(i^2)*y ) == 20 || 3(i^2)/5y^2 == 12(i^2)*y ) == 0 );
+	CHECK( solve( 12*y == (i^2)-i ) ==  -1/12 - i/12);
+	CHECK( solve( (y^2) - 2*y - y*i-1== -7i  ) == -1+2i || solve( (y^2) - 2*y - y*i-1== -7i  ) == 3-i );
+	CHECK( solve( (y^2) - 3*y -2i*y== -i-5  ) == 1-i || solve( (y^2) - 3*y -2i*y== -i-5  ) == 2+3i  );
+	CHECK( solve( 2*(y^2) - 11*y+2i == -14-i+3i ) == 3.5 || solve( 2*(y^2) - 11*y+2i == -14-i+3i ) == 2  );
+	CHECK( solve( 3*(y^2) == -6  ) == 1.4142i || solve( 3*(y^2) == -6  ) == -1.4142i  );
+	CHECK( solve( 5*(y^2) -4*y == -1) == 2/5 - i/5 || solve( 5*(y^2) -4*y == -1) == 2/5 + i/5  );
+	CHECK( solve( (y^2) == 4*y - 5 ) == 2+i || solve( (y^2) == 4*y - 5 ) == 2-i  );
+
+	CHECK( solve( -2y+i == i*(y^2) ) == i );
+	CHECK( solve( (y^2) == -9 ) == 3i ||  solve( -2i/3*(y^2) == -9 ) == -3i );
+	CHECK( solve( y == i*(y^2)-6i ) == 5/2-i/2 || solve( y == i*(y^2)-6i ) == -5/2-i/2 );
+	CHECK( solve( (y^2) == -25 ) == 5i || solve( (y^2) == -25 ) == -5i );
+	CHECK( solve( (y^2)-12 == 6i ) ==  );
+	CHECK( solve( (y^2)-(60+2i)/2 == i-30 ) == 1+i || solve( (y^2)-(60+2i)/2 == i-30) == -1-i);
+	CHECK( solve( (y^2)-i*y == 5 ) == 2+i || solve( (y^2)-i*y == 5 ) == -2+i );
+	CHECK( solve( -(y^2) == -6-i*y ) == 5/2+0.5i || solve( -(y^2) == -6-i*y ) == -5/2+0.5i );
+	CHECK( solve( i*(y^2)-5y == 4i ) == -4i || solve( i*(y^2)-5y == 4i ) == -i );
+	CHECK( solve( -1*(y^2)/10i == -0.1i ) == i || solve( -1*(y^2)/10i == -0.1i ) == -i );
+
+	CHECK_THROWS( solve( 3*(y^6)+i == 12 ) );
+	CHECK_THROWS( solve( 26-y == (y^4) ) );
+	CHECK_THROWS( solve( 14*(y^3) == i+3/4 ) );
+	CHECK_THROWS( solve( 2+3y+2*(y^12) == i  ) );
+	CHECK_THROWS( solve( -i+3(y^3) == 0 ) );
+}
