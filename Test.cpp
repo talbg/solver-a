@@ -115,20 +115,20 @@ TEST_CASE(" complex quadratic equation ") {
 	CHECK( solve( 5*(y^2) -4*y == -1) == 2/5 - i/5 || solve( 5*(y^2) -4*y == -1) == 2/5 + i/5  );
 	CHECK( solve( (y^2) == 4*y - 5 ) == 2+i || solve( (y^2) == 4*y - 5 ) == 2-i  );
 
-	CHECK( solve( -2y+i == i*(y^2) ) == i );
-	CHECK( solve( (y^2) == -9 ) == 3i ||  solve( -2i/3*(y^2) == -9 ) == -3i );
-	CHECK( solve( y == i*(y^2)-6i ) == 5/2-i/2 || solve( y == i*(y^2)-6i ) == -5/2-i/2 );
-	CHECK( solve( (y^2) == -25 ) == 5i || solve( (y^2) == -25 ) == -5i );
-	CHECK( solve( (y^2)-12 == 6i ) ==  );
-	CHECK( solve( (y^2)-(60+2i)/2 == i-30 ) == 1+i || solve( (y^2)-(60+2i)/2 == i-30) == -1-i);
-	CHECK( solve( (y^2)-i*y == 5 ) == 2+i || solve( (y^2)-i*y == 5 ) == -2+i );
-	CHECK( solve( -(y^2) == -6-i*y ) == 5/2+0.5i || solve( -(y^2) == -6-i*y ) == -5/2+0.5i );
-	CHECK( solve( i*(y^2)-5y == 4i ) == -4i || solve( i*(y^2)-5y == 4i ) == -i );
-	CHECK( solve( -1*(y^2)/10i == -0.1i ) == i || solve( -1*(y^2)/10i == -0.1i ) == -i );
+	CHECK( solve( -2y+1i == 1i*(y^2) ) == 1i );
+	CHECK( (solve( (y^2) == -9.0 ) == 3i || solve( -1.5i*(y^2) == -9.0 ) == -3i) );
+	CHECK( (solve( y == 1i*(y^2)-6i ) == 2.5-0.5i || solve( y == 1i*(y^2)-6i ) == -2.5-0.5i) );
+	CHECK( (solve( (y^2) == -25.0 ) == 5i || solve( (y^2) == -25.0 ) == -5i) );
+	CHECK( (solve( -1y+2i == 3i*(y^2) ) == 8.33333333+0.16666666i || solve( -1y+2i == 3i*(y^2) ) == -8.33333333+0.16666666i ));
+	CHECK( (solve( (y^2)-(60.0+2i)/2.0 == 1i-30.0 ) == 1.0+1i || solve( (y^2)-(60.0+2i)/2 == 1i-30.0) == -1-i));
+	CHECK( (solve( (y^2)-1i*y == 5.0 ) == 2.0+1i || solve( (y^2)-1i*y == 5.0 ) == -2.0+1i) );
+	CHECK( (solve( -1*(y^2) == -6-1i*y ) == 5/2+0.5i || solve( -1*(y^2) == -6.0-1i*y ) == -2.5+0.5i) );
+	CHECK( (solve( 1i*(y^2)-5y == 4i ) == -4i || solve( 1i*(y^2)-5y == 4i ) == -1i) );
+	CHECK( (solve( -1*(y^2)/10i == -0.1i ) == 1i || solve( -1*(y^2)/10i == -0.1i ) == -1i) );
 
-	CHECK_THROWS( solve( 3*(y^6)+i == 12 ) );
-	CHECK_THROWS( solve( 26-y == (y^4) ) );
-	CHECK_THROWS( solve( 14*(y^3) == i+3/4 ) );
-	CHECK_THROWS( solve( 2+3y+2*(y^12) == i  ) );
-	CHECK_THROWS( solve( -i+3(y^3) == 0 ) );
+	CHECK_THROWS( solve( 3*(y^6)+1i == 12.0 ) );
+	CHECK_THROWS( solve( 26.0-y == (y^4) ) );
+	CHECK_THROWS( solve( 14*(y^3) == 1i+3/4 ) );
+	CHECK_THROWS( solve( 2.0+3y+2*(y^12) == 1i  ) );
+	CHECK_THROWS( solve( -1i+3*(y^3) == 0 ) );
 }
